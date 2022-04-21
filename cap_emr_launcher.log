@@ -1,0 +1,14 @@
+2022-04-21 20:17:41,424 — my_app.module_1 — INFO — logging info 1
+2022-04-21 20:17:41,425 — my_app.module_2 — INFO — logging info in module 2
+2022-04-21 20:17:41,427 — my_app.module_1 — INFO — logging info 1
+2022-04-21 20:17:41,427 — my_app.module_1 — INFO — logging info 1
+2022-04-21 20:17:41,428 — my_app.module_1 — DEBUG — This is a DEBUG output
+2022-04-21 20:17:41,428 — my_app.module_1 — DEBUG — This is a DEBUG output
+2022-04-21 20:17:41,429 — my_app.module_2 — INFO — logging info in module 2
+2022-04-21 20:20:10,899 — my_app.module_1 — INFO — logging info 1
+2022-04-21 20:20:10,901 — my_app.module_2 — INFO — logging info in module 2
+2022-04-21 20:20:10,915 — my_app.module_1 — INFO — logging info 1
+2022-04-21 20:20:10,915 — my_app.module_1 — INFO — logging info 1
+2022-04-21 20:20:10,916 — my_app.module_1 — DEBUG — This is a DEBUG output
+2022-04-21 20:20:10,916 — my_app.module_1 — DEBUG — This is a DEBUG output
+2022-04-21 20:20:10,918 — my_app.module_2 — INFO — logging info in module 2
