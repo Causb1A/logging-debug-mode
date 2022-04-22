@@ -17,8 +17,8 @@ def function_initiates_debug_mode():
 
 def does_something():
     print("Does Something Module 1")
-    log.info("does something info")
-    log.debug("This is a DEBUG output")
+    log.info("does something info module 1")
+    log.debug("This is a DEBUG output module 1")
 
 
 def run():

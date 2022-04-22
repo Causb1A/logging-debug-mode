@@ -12,3 +12,17 @@
 2022-04-21 20:20:10,916 — my_app.module_1 — DEBUG — This is a DEBUG output
 2022-04-21 20:20:10,916 — my_app.module_1 — DEBUG — This is a DEBUG output
 2022-04-21 20:20:10,918 — my_app.module_2 — INFO — logging info in module 2
+2022-04-22 09:49:12,859 — my_app.module_1 — INFO — does something info
+2022-04-22 09:49:12,860 — my_app.module_2 — INFO — logging info in module 2
+2022-04-22 09:49:12,861 — my_app.module_1 — INFO — does something info
+2022-04-22 09:49:12,861 — my_app.module_1 — INFO — does something info
+2022-04-22 09:49:12,861 — my_app.module_1 — DEBUG — This is a DEBUG output
+2022-04-22 09:49:12,861 — my_app.module_1 — DEBUG — This is a DEBUG output
+2022-04-22 09:49:12,861 — my_app.module_2 — INFO — logging info in module 2
+2022-04-22 09:49:31,399 — my_app.module_1 — INFO — does something info module 1
+2022-04-22 09:49:31,400 — my_app.module_2 — INFO — logging info in module 2
+2022-04-22 09:49:31,402 — my_app.module_1 — INFO — does something info module 1
+2022-04-22 09:49:31,402 — my_app.module_1 — INFO — does something info module 1
+2022-04-22 09:49:31,404 — my_app.module_1 — DEBUG — This is a DEBUG output module 1
+2022-04-22 09:49:31,404 — my_app.module_1 — DEBUG — This is a DEBUG output module 1
+2022-04-22 09:49:31,407 — my_app.module_2 — INFO — logging info in module 2
