@@ -20,6 +20,7 @@ class Logger:
             )
             cls.log_file = "application_log_file.log"
             cls.debug_mode = False
+            cls.logger_dict = {}
 
         return cls._instance
 
@@ -89,3 +90,10 @@ class Logger:
 
         logger.propagate = False
         return logger
+
+    def logger(self, logger_name: str):
+        if logger_name in self.logger_dict.keys():
+            return self.logger_dict[logger_name]
+        log = self.get_logger(__name__)
+        self.logger_dict[logger_name] = log
+        return log
