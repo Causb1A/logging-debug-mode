@@ -78,10 +78,11 @@ class Logger:
             logger: returns logger for module
         """
         logger = logging.getLogger(logger_name)
-        if self.debug_mode is True:
-            logger.setLevel(logging.DEBUG)
-        else:
-            logger.setLevel(logging.INFO)
+        # logging.basicConfig(level=logging.INFO)
+        # if self.debug_mode is True:
+        #     logger.setLevel(logging.DEBUG)
+        # else:
+        #     logger.setLevel(logging.INFO)
 
         console_handler = self.get_console_handler()
         file_handler = self.get_file_handler()
