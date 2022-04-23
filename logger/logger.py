@@ -3,11 +3,6 @@ import sys
 from logging import handlers
 
 
-import logging
-import sys
-from logging import handlers
-
-
 class Logger:
     """
     Singleton Logger class. This class is only instantiated ONCE. It is to keep a consistent
@@ -23,7 +18,7 @@ class Logger:
             cls.formatter = logging.Formatter(
                 "%(asctime)s — %(name)s — %(levelname)s — %(message)s"
             )
-            cls.log_file = "cap_emr_launcher.log"
+            cls.log_file = "application_log_file.log"
             cls.debug_mode = False
 
         return cls._instance
