@@ -54,7 +54,7 @@ def test_singleton_logger_class_object(logger_class_instance, logger_class_insta
     c1 = logger_class_instance
     c2 = logger_class_instance2
     # Changing one of the objects in c2
-    c2.debug_mode = False
+    c2.log_file = "log_file_change.log"
     assert c1 == c2
 
 
@@ -86,22 +86,12 @@ def test_get_logger(logging_module_instance):
     expected_handler_numbers = 2
     result_handler_numbers = len(log.handlers)
 
-    # Logging level at info is 20, this is what we expect
-    expected_logging_level = 20
+    # We expect logging level to be 0 as we do not assign any logging level to the child handlers.
+    expected_logging_level = 0
     result_logging_level = log.level
 
     assert expected_handler_numbers == result_handler_numbers
     assert expected_logging_level == result_logging_level
-
-
-def test_init_debug_mode(logger_class_instance):
-    """
-    Testing the init_debug_mode to to change the object within the logger
-    debug should be at log level 10
-    """
-    logger_class_instance.init_debug_mode(True)
-    log = logger_class_instance.get_logger("test_name")
-    assert log.level == 10
 
 
 def test_add_handlers(

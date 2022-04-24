@@ -1,42 +1,36 @@
-from distutils.debug import DEBUG
 from logger import Logger
 from .module_2 import does_something_module_2
 import logging
 
-logging.basicConfig(level=logging.INFO)
-logger = Logger()
-log = Logger.get_logger(__name__)
+log = Logger().get_logger(__name__)
 
 
-# def function_initiates_debug_mode():
-#     """I am a function that initiates debug mode"""
-#     # Must be global as log is global in the file
-#     global log
-#     # Initiate the debug mode to be true
-#     logger.init_debug_mode(True)
-#     # reinitiates global log after setting debug_mode to be true
-#     log = logger.get_logger(__name__)
+def function_initiates_debug_mode(debug_mode: bool):
+    """I am a function that initiates debug mode at the root level"""
+    if debug_mode:
+        logging.root.setLevel(logging.DEBUG)
 
 
 def does_something():
+    """I am a function that does something - my purpose is to test logging."""
     print("Does Something Module 1")
     log.info("does something info module 1")
     log.debug("This is a DEBUG output module 1")
 
 
 def run():
-    # This should output some logs but Not the debug mode only INFO
+    # This should output some logs but Not the debug mode only INFO - remember the child logger is inheriting from root logger
     does_something()
     # lets try module 2
     does_something_module_2()
     # still no debug - ONLY INFO
 
-    # Now I'm going to set debug mode to be true - FUNCTION THAT CHANGES THE SINGLETON CLASS AND LOG
+    # Now I'm going to set debug mode to be true - Function that changes root level logging. This could be from anything,
+    # This could be from a user initiating --debug or its own function etc. Up to you.
+    function_initiates_debug_mode(True)
 
-    # Let's run the function does_something() again to see that debug will now be outputted. Debug is outputted here, great this is what I want
+    # Let's run the function does_something() again to see that debug will now be outputted. Debug is outputted here.
     does_something()
 
-    # how about module 2 - DEBUG IS NOT OUTPUTTED HERE. I want this outputted with DEBUG.
+    # how about module 2 - Debug is also outputted here
     does_something_module_2()
-
-    # Debug mode is created with one class singleton instance, you can change the variables on the fly. initialising debug mode.
