@@ -1,14 +1,7 @@
 from logger import Logger
 from .module_2 import does_something_module_2
-import logging
 
 log = Logger().get_logger(__name__)
-
-
-def function_initiates_debug_mode(debug_mode: bool):
-    """I am a function that initiates debug mode at the root level"""
-    if debug_mode:
-        logging.root.setLevel(logging.DEBUG)
 
 
 def does_something():
@@ -27,7 +20,7 @@ def run():
 
     # Now I'm going to set debug mode to be true - Function that changes root level logging. This could be from anything,
     # This could be from a user initiating --debug or its own function etc. Up to you.
-    function_initiates_debug_mode(True)
+    Logger().set_debug_mode(True)
 
     # Let's run the function does_something() again to see that debug will now be outputted. Debug is outputted here.
     does_something()
