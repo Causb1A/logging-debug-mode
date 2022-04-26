@@ -43,7 +43,9 @@ class Logger:
         Returns:
             logging handler object : the console handler
         """
-        file_handler = handlers.RotatingFileHandler(self.log_file, maxBytes=5000)
+        file_handler = handlers.RotatingFileHandler(
+            self.log_file, maxBytes=5000, backupCount=1
+        )
         file_handler.setFormatter(self.formatter)
         file_handler.name = "fileHandler"
         return file_handler
